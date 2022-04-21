@@ -3,3 +3,14 @@
 ################################################################################
 
 /Tests/obj
+/Tests/bin/Debug/netcoreapp3.1
+/PreliminaryAssessment/obj
+/PreliminaryAssessment/bin/Debug/netcoreapp3.1
+/PreliminaryAssessment/.vs/PreliminaryAssessment/v17
+/GiveMeSomeStats/obj
+/GiveMeSomeStats/bin/Debug/netcoreapp3.1
+/FindLargestSquare/obj
+/FindLargestSquare/bin/Debug/netcoreapp3.1
+/BusinessLogic/obj
+/BusinessLogic/bin/Debug/netcoreapp3.1
+/.vs
