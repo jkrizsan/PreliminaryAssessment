@@ -10,15 +10,13 @@ namespace Tests
 {
 
     [TestFixture]
-    public class TestSortingService
+    public class TestSortingService : TestBase<SortingService>
     {
         private double[] _array;
 
         private ISortingService _sortingService;
 
         private const int _size = 500;
-
-        private Mock<ILogger<SortingService>> _loggerMock;
 
         [SetUp]
         public void SetUp()
@@ -106,19 +104,6 @@ namespace Tests
             Assert.Greater(mergeWatch.Elapsed.TotalMilliseconds, bubbleWatch.Elapsed.TotalMilliseconds);
         }
 
-        private void checkLogs(string startMessage, string endMessage)
-        {
-            _loggerMock.Verify(x => x.Log(LogLevel.Information,
-               It.IsAny<EventId>(),
-               It.Is<It.IsAnyType>((v, t) => v.ToString().Contains(startMessage)),
-               It.IsAny<Exception>(),
-               It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
-
-            _loggerMock.Verify(x => x.Log(LogLevel.Information,
-                It.IsAny<EventId>(),
-                It.Is<It.IsAnyType>((v, t) => v.ToString().Contains(endMessage)),
-                It.IsAny<Exception>(),
-                It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
-        }
+       
     }
 }
