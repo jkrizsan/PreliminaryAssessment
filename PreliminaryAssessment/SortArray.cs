@@ -18,15 +18,15 @@ namespace PreliminaryAssessment
         {
             init();
 
-            double[] arr = _sortingService.CreateArrayWithRandomNumbers(11);
+            double[] arr = _sortingService.CreateArrayWithRandomNumbers(10);
 
             _sortingService.BubbleSort(arr, true);
 
-            _sortingService.BubbleSort(arr, false);
+            //_sortingService.BubbleSort(arr, false);
 
-            _sortingService.MergeSort(arr, true);
+            //_sortingService.MergeSort(arr, true);
 
-            _sortingService.MergeSort(arr, false);
+            //_sortingService.MergeSort(arr, false);
 
 
             _logger.LogInformation($"The {nameof(SortArray)} application is ended");

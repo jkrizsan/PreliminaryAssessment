@@ -88,18 +88,19 @@ namespace Tests
         [Test]
         public void Test_ComparePerformance_OK()
         {
-            var bubbleArray = _sortingService.CreateArrayWithRandomNumbers(1000);
-            var mergeArray = _sortingService.CreateArrayWithRandomNumbers(1000);
+            int size = 500;
+            var bubbleArray = _sortingService.CreateArrayWithRandomNumbers(size);
+            var mergeArray = _sortingService.CreateArrayWithRandomNumbers(size);
 
             Stopwatch bubbleWatch = new Stopwatch();
             Stopwatch mergeWatch = new Stopwatch();
 
             mergeWatch.Start();
-            _sortingService.MergeSort(_array, false);
+            _sortingService.MergeSort(mergeArray, false);
             mergeWatch.Stop();
 
             bubbleWatch.Start();
-            _sortingService.BubbleSort(_array, false);
+            _sortingService.BubbleSort(bubbleArray, false);
             bubbleWatch.Stop();
 
             Assert.Greater(mergeWatch.Elapsed.TotalMilliseconds, bubbleWatch.Elapsed.TotalMilliseconds);

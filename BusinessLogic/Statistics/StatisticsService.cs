@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BusinessLogic.Statistics
 {
     /// <summary>
-    /// Statistics Service Class
+    /// Class of the Statistics Service
     /// </summary>
     public class StatisticsService : IStatisticsService
     {

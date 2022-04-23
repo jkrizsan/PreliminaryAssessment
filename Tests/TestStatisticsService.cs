@@ -1,8 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
 using BusinessLogic.Statistics;
-using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Tests
 {

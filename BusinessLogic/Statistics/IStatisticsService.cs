@@ -3,7 +3,7 @@
 namespace BusinessLogic.Statistics
 {
     /// <summary>
-    ///  Statistics Service Interface
+    ///  Interface of Statistics Service
     /// </summary>
     public interface IStatisticsService
     {

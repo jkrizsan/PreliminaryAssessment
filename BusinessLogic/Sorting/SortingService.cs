@@ -8,9 +8,9 @@ namespace BusinessLogic.Sorting
     /// </summary>
     public class SortingService: ISortingService
     {
-        private readonly ILogger _logger;
-
         private readonly Random _rnd;
+
+        private readonly ILogger _logger;
 
         /// <summary>
         /// Constructor
@@ -23,7 +23,7 @@ namespace BusinessLogic.Sorting
         }
 
         /// <inheritdoc />
-        public void BubbleSort(double[] arr, bool isAsc)
+        public void BubbleSort(double[] arr, bool isAscending)
         {
             _logger.LogInformation("Bubble sorting is started!");
 
@@ -31,7 +31,7 @@ namespace BusinessLogic.Sorting
             {
                 for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (this.isAsc(arr[i], arr[j], isAsc))
+                    if (isAsc(arr[i], arr[j], isAscending))
                     {
                         var temp = arr[i];
                         arr[i] = arr[j];
@@ -43,6 +43,7 @@ namespace BusinessLogic.Sorting
             _logger.LogInformation("Bubble sorting is ended!");
         }
 
+        /// <inheritdoc />
         public double[] CreateArrayWithRandomNumbers(int size)
         {
             double[] array = new double[size];

@@ -9,9 +9,9 @@
         /// Bubble sorting, Complexity: O(N^2)
         /// </summary>
         /// <param name="arr">Unsorted Array</param>
-        /// <param name="isAsc">Control Ascending(true) or Descending(false) sorting</param>
+        /// <param name="isAscending">Control Ascending(true) or Descending(false) sorting</param>
         /// <returns></returns>
-        void BubbleSort(double[] arr, bool isAsc);
+        void BubbleSort(double[] arr, bool isAscending);
 
         /// <summary>
         /// Merge sorting, Complexity: O(NLogN)
