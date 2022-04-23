@@ -16,9 +16,9 @@ namespace BusinessLogic.Sorting
         /// Constructor
         /// </summary>
         /// <param name="loggerFactory"></param>
-        public SortingService(ILoggerFactory loggerFactory)
+        public SortingService(ILoggerFactory loggerFactory, Random rnd)
         {
-            _rnd = new Random();
+            _rnd = rnd;
             _logger = loggerFactory.CreateLogger<SortingService>();
         }
 

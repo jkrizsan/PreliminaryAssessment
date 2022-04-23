@@ -22,7 +22,7 @@ namespace Tests
         {
             _loggerMock = new Mock<ILogger<SortingService>>();
 
-            _sortingService = new SortingService(getLoggerMock().Object);
+            _sortingService = new SortingService(getLoggerMock().Object, new System.Random());
 
             _array = _sortingService.CreateArrayWithRandomNumbers(_size);
         }

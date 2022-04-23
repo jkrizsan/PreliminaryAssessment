@@ -27,6 +27,7 @@ namespace PreliminaryAssessment
                 builder.AddSimpleConsole());
 
             services.AddTransient(typeof(ISortingService), typeof(SortingService));
+            services.AddSingleton(x => new Random());
         }
 
         public static  T GetService<T>() where T : class
