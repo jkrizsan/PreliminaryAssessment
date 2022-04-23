@@ -1,6 +1,4 @@
 ﻿using Moq;
-using System;
-using System.Linq;
 using NUnit.Framework;
 using Microsoft.Extensions.Logging;
 using BusinessLogic.Square;
@@ -18,18 +16,7 @@ namespace Tests
         {
             _loggerMock = new Mock<ILogger<SquareService>>();
 
-            _loggerMock.Setup(
-                m => m.Log(
-                    LogLevel.Information,
-                    It.IsAny<EventId>(),
-                    It.IsAny<object>(),
-                    It.IsAny<Exception>(),
-                    It.IsAny<Func<object, Exception, string>>()));
-
-            var mockLoggerFactory = new Mock<ILoggerFactory>();
-            mockLoggerFactory.Setup(x => x.CreateLogger(It.IsAny<string>())).Returns(() => _loggerMock.Object);
-
-            _squareService = new SquareService(mockLoggerFactory.Object);
+            _squareService = new SquareService(getLoggerMock().Object);
         }
 
         [Test]

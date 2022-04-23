@@ -1,5 +1,4 @@
 ﻿using Moq;
-using System;
 using System.Linq;
 using NUnit.Framework;
 using System.Diagnostics;
@@ -23,18 +22,7 @@ namespace Tests
         {
             _loggerMock = new Mock<ILogger<SortingService>>();
 
-            _loggerMock.Setup(
-                m => m.Log(
-                    LogLevel.Information,
-                    It.IsAny<EventId>(),
-                    It.IsAny<object>(),
-                    It.IsAny<Exception>(),
-                    It.IsAny<Func<object, Exception, string>>()));
-
-            var mockLoggerFactory = new Mock<ILoggerFactory>();
-            mockLoggerFactory.Setup(x => x.CreateLogger(It.IsAny<string>())).Returns(() => _loggerMock.Object);
-
-            _sortingService = new SortingService(mockLoggerFactory.Object);
+            _sortingService = new SortingService(getLoggerMock().Object);
 
             _array = _sortingService.CreateArrayWithRandomNumbers(_size);
         }

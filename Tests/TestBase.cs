@@ -22,5 +22,14 @@ namespace Tests
                 It.IsAny<Exception>(),
                 It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
         }
+
+        protected Mock<ILoggerFactory> getLoggerMock()
+        {
+            var mockLoggerFactory = new Mock<ILoggerFactory>();
+            mockLoggerFactory.Setup(x => x.CreateLogger(It.IsAny<string>()))
+                .Returns(() => _loggerMock.Object);
+            
+            return mockLoggerFactory;
+        }
     }
 }
