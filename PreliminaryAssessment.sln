@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArray", "SortArray.csproj", "{3F48468F-16C5-4CF4-BB54-F98E045A05BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArray", "SortArray\SortArray.csproj", "{3F48468F-16C5-4CF4-BB54-F98E045A05BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindLargestSquare", "..\FindLargestSquare\FindLargestSquare.csproj", "{90AABEC0-806E-4040-A7C1-B1BDD5569B39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindLargestSquare", "FindLargestSquare\FindLargestSquare.csproj", "{90AABEC0-806E-4040-A7C1-B1BDD5569B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiveMeSomeStats", "..\GiveMeSomeStats\GiveMeSomeStats.csproj", "{561A54B5-C6B7-4DBA-98E0-3D6423595DE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiveMeSomeStats", "GiveMeSomeStats\GiveMeSomeStats.csproj", "{561A54B5-C6B7-4DBA-98E0-3D6423595DE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "..\BusinessLogic\BusinessLogic.csproj", "{BF10413F-5423-4A0C-9816-7CB02845F1E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{BF10413F-5423-4A0C-9816-7CB02845F1E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{98463DAB-D424-4267-B0A0-2F7170D93719}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{98463DAB-D424-4267-B0A0-2F7170D93719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
