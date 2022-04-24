@@ -1,3 +1,11 @@
-# PreliminaryAssessment
+	#PreliminaryAssessment (Projects overview)
 
-	#SortArray Project: Simple logic for order arrays, complexity is O(n^2), Unit test included
+		#BusinessLogic Project: Contains the service classes with the business logic
+
+		#SortArray Project: Client project that use the SortingService
+		
+		#GiveMeSomeStats Project: Client project that use the StatisticsService
+		
+		#FindLargestSquare Project: Client project that use the SquareService
+		
+		#Tests Project: Test project that contains unit and perfomance tests for all of the mentioned services
