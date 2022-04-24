@@ -10,17 +10,8 @@ namespace Tests
 
         protected void checkLogs(string startMessage, string endMessage)
         {
-            _loggerMock.Verify(x => x.Log(LogLevel.Information,
-               It.IsAny<EventId>(),
-               It.Is<It.IsAnyType>((v, t) => v.ToString().Contains(startMessage)),
-               It.IsAny<Exception>(),
-               It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
-
-            _loggerMock.Verify(x => x.Log(LogLevel.Information,
-                It.IsAny<EventId>(),
-                It.Is<It.IsAnyType>((v, t) => v.ToString().Contains(endMessage)),
-                It.IsAny<Exception>(),
-                It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
+            checkLogMessage(startMessage);
+            checkLogMessage(endMessage);
         }
 
         protected Mock<ILoggerFactory> getLoggerMock()
@@ -31,5 +22,12 @@ namespace Tests
             
             return mockLoggerFactory;
         }
+
+        private void checkLogMessage(string message)
+            => _loggerMock.Verify(x => x.Log(LogLevel.Information,
+            It.IsAny<EventId>(),
+            It.Is<It.IsAnyType>((v, t) => v.ToString().Contains(message)),
+            It.IsAny<Exception>(),
+            It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)), Times.Once);
     }
 }
